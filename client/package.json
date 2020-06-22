@@ -17,7 +17,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
+    "react-scripts": "^3.4.0",
     "react-validation": "^3.0.7",
     "tubular-react": "^4.1.31",
     "validator": "^12.2.0"
@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"http://localhost:5000"
+  "proxy": "http://localhost:5000"
 }
