@@ -1,5 +1,5 @@
 # User CRUD Project
-A backend stack for create, read, update and delete users with Nodejs, JWT authentification, sequelize and Mysql
+A full stack app for create, read, update and delete users including role based authorization for "user","administrator" and "moderator". This app was made with Nodejs, JWT authentification, sequelize and Mysql
 
 ## Project setup
 In the project directory, you can run:
