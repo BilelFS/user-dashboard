@@ -5,10 +5,10 @@ A full stack app for create, read, update and delete users including role based 
 In the project directory, you can run:
 
 ```
-npm install
+npm install && npm run client-install
 ```
 
 ### Project Run
 ```
-npm start
+npm run dev
 ```
