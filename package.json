@@ -9,7 +9,7 @@
     "start": "node server.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm start\" \"npm run client\"",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "npm build"
   },
   "keywords": [
     "node.js",

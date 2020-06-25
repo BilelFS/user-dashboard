@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const path = require('path');
 
 const app = express();
 
@@ -27,24 +28,16 @@ db.sequelize.sync({ force: true }).then(() => {
   console.log("Drop and Resync Database with { force: true }");
   initial();
 });
-//Serve our static asset if in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("frontend/build"));
 
-  app.get("*", (req, res) => {
-    res.sendfile(path.resolve(__dirname, "frontend", "build", "index.html"));
-  });
-} else {
-  app.use(express.static(path.join(__dirname, "/frontend/public")));
-  app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./frontend/public/index.html"));
-  });
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
 }
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to User Crud application." });
-});
+/* app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+}); */
+//app.use(express.static('public'));
+
 
 // routes
 require("./app/routes/auth.routes")(app);
